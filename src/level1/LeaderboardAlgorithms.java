@@ -17,8 +17,34 @@ public class LeaderboardAlgorithms {
      * - You may use Collections.sort + Comparator for the first version.
      * - Week 8 challenge/extra credit: replace with merge sort or quicksort.
      */
+	
+	/*
+	 * - This method sorts the ArrayList of scores in descending order.
+	 * - The first for loop iterates over the entire array.
+	 * - The second for loop iterates over the array starting from where the first for loop is at.
+	 * - The second for loop searches for the maximum score.
+	 * - Using a temporary variable, at the end of the second for loop, it swaps the element
+	 *   the first for loop is pointing to with the element with the maximum score.
+	 * - The first for loop continues until the end of the list. The list is now sorted.
+	 */
+	
     public static void sortByScoreDescending(ArrayList<ScoreEntry> list) {
-        // TODO
+    	int n = list.size();
+    	
+    	int maxIndex = 0;
+    	for (int i = 0; i < n - 1; i++) {
+    		for (int j = i; j < n - 1; j++) {
+    			int maxScore = list.get(maxIndex).getScore();
+    			int currScore = list.get(j).getScore();
+    			
+    			if (currScore > maxScore) maxIndex = j;
+    		}
+    		
+    		ScoreEntry temp = list.get(i);
+    		list.set(i, list.get(maxIndex));
+    		list.set(maxIndex, temp);
+    		
+    	}
     }
 
     /**

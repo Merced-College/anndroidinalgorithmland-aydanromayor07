@@ -23,6 +23,8 @@ Place the extracted audio file into the project folder named content.
 
 Download all of the whole content folder, and put this in your project.
 
+<br>
+
 Aydan Romayor
 
 3/16/2026
@@ -68,3 +70,18 @@ Project setup completed successfully.
 2. Strings and integers are used to store the scores and the associated user.
 
 3. The LeaderboardAlgorithms file seems to be the most logical place to implement the sorting algorithms.
+
+## Sorting
+
+1. The sorting code was added to the LeaderboardAlgorithms class.
+
+2. The location was chosen because there were empty sorting functions that needed to be defined.
+
+3. An ArrayList.
+
+
+1. Selection Sort
+
+2. The algorithm searches the array for the maximum score. It then swaps the current score with the maxmimum score, and then increments an index. It continues until it gets to the end of the array.
+
+3. To verify, the program was ran, the scores were loaded, and "Top 20 (by score)" was selected in the leaderboards menu.
