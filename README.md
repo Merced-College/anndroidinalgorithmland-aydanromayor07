@@ -85,3 +85,5 @@ Project setup completed successfully.
 2. The algorithm searches the array for the maximum score. It then swaps the current score with the maxmimum score, and then increments an index. It continues until it gets to the end of the array.
 
 3. To verify, the program was ran, the scores were loaded, and "Top 20 (by score)" was selected in the leaderboards menu.
+
+4. Same algorithm was used for the username sort. Verified with the "sort by username" button in the leaderboards menu.

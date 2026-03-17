@@ -27,7 +27,6 @@ public class LeaderboardAlgorithms {
 	 *   the first for loop is pointing to with the element with the maximum score.
 	 * - The first for loop continues until the end of the list. The list is now sorted.
 	 */
-	
     public static void sortByScoreDescending(ArrayList<ScoreEntry> list) {
     	int n = list.size();
     	
@@ -43,7 +42,6 @@ public class LeaderboardAlgorithms {
     		ScoreEntry temp = list.get(i);
     		list.set(i, list.get(maxIndex));
     		list.set(maxIndex, temp);
-    		
     	}
     }
 
@@ -53,8 +51,32 @@ public class LeaderboardAlgorithms {
      * Requirements:
      * - Sort IN PLACE (modify the given list)
      */
+    
+    /*
+     * - This method sorts the list by username, in ascending order (A -> Z).
+     * - The first for loop iterates over the entire array.
+     * - The second for loop iterates over the array starting at where the first loop points.
+     * - The second for loop uses the compareTo function to compare strings lexicographically.
+     * - Using a temporary variable, the current element and the element that is smaller
+     *   lexicographically is swapped.
+     * - The first for loop continues until the end of the list. The list is now sorted.
+     */
     public static void sortByUsernameAscending(ArrayList<ScoreEntry> list) {
-        // TODO
+    	int n = list.size();
+    	
+    	int minIndex = 0;
+    	for (int i = 0; i < n - 1; i++) {
+    		for (int j = i; j < n - 1; j++) {
+    			String minName = list.get(minIndex).getUsername();
+    			String currName = list.get(j).getUsername();
+    			
+    			if (currName.compareTo(minName) < 0) minIndex = j;
+    		}
+    		
+    		ScoreEntry temp = list.get(i);
+    		list.set(i, list.get(minIndex));
+    		list.set(minIndex, temp);
+    	}
     }
 
     /**
