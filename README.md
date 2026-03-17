@@ -30,3 +30,5 @@ Aydan Romayor
 Project setup and ran
 
 Project setup completed successfully.
+
+## Code Exploration
