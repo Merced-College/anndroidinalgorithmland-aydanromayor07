@@ -86,8 +86,29 @@ public class LeaderboardAlgorithms {
      *
      * @return index of the matching entry, or -1 if not found
      */
+    
+    /*
+     * - This method uses binary search to find the inputted username in the list.
+     * - The method continuously divides the list into halves to find the username.
+     * - It makes use of the compareTo() function to compare the inputted username to the name found by dividing the list in
+     *   half lexicographically.
+     * - If the username is found in the list, then it returns the index of where the name was found.
+     * - Otherwise, it returns -1.
+     */
     public static int binarySearchByUsername(ArrayList<ScoreEntry> list, String username) {
-        // TODO
-        return -1;
+    	int low = 0;
+    	int high = list.size() - 1;
+    	
+    	while (low <= high) {
+    		int mid = (low + high) / 2;
+    		
+    		if (list.get(mid).getUsername().equals(username)) return mid;
+    		
+    		if (list.get(mid).getUsername().compareTo(username) < 0) low = mid + 1;
+    		else high = mid - 1;
+    		
+    	}
+    	
+    	return -1;
     }
 }

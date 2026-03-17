@@ -87,3 +87,14 @@ Project setup completed successfully.
 3. To verify, the program was ran, the scores were loaded, and "Top 20 (by score)" was selected in the leaderboards menu.
 
 4. Same algorithm was used for the username sort. Verified with the "sort by username" button in the leaderboards menu.
+
+## Searching
+
+1. Binary search works by continuously dividing a list into halves until the desired element is found.
+
+2. The data must be sorted before binary search because the search makes use of checking whether the element found by dividing by half is 
+less than, greater than, or equal to the element being searched.
+
+3. Integers were used for the low, mid, and high variables.
+
+4. If the element isn't found, then the method returns -1.
