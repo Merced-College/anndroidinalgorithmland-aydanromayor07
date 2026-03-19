@@ -25,7 +25,7 @@ Download all of the whole content folder, and put this in your project.
 
 <br>
 
-Aydan Romayor
+Aydan Romayor, Giovanni Hinojosa, Manuel Perez
 
 3/16/2026
 
